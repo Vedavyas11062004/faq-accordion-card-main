@@ -102,10 +102,14 @@
   </body>
   <script>
     const btn = document.querySelectorAll(".contentbox");
+    let current;
     btn.forEach((element) => {
       element.addEventListener("click", () => {
+        if (current && current != element) {
+          current.classList.toggle("show");
+        }
         element.classList.toggle("show");
-        console.log(element.classList);
+        current = element;
       });
     });
   </script>
