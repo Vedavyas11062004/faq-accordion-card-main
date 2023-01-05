@@ -109,7 +109,7 @@
           current.classList.toggle("show");
         }
         element.classList.toggle("show");
-        current = element;
+        current = current === element ? undefined :element;
       });
     });
   </script>
